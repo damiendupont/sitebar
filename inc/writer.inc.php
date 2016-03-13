@@ -97,7 +97,7 @@ class SB_WriterInterface extends SB_Converter
         return $values;
     }
 
-    function settingsValueFmt($label, $att)
+    public static function settingsValueFmt($label, $att)
     {
         $fmt = $this->settingsValue($config);
         if (is_array($value))
@@ -110,7 +110,7 @@ class SB_WriterInterface extends SB_Converter
         }
     }
 
-    function settingsValue($label)
+    public static function settingsValue($label)
     {
         $um =& SB_UserManager::staticInstance();
         $val = $um->getParamB64('config', $label);
