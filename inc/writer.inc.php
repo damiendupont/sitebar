@@ -81,7 +81,7 @@ class SB_WriterInterface extends SB_Converter
         $this->loader = $loader;
     }
 
-    function settingItems()
+    public static function settingItems()
     {
         static $values = array
         (
